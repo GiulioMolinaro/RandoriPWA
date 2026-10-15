@@ -1,0 +1,720 @@
+/* --- Reset Totale e Pulizia Bordi --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+body {
+  background-color: #f2f2f7;
+  color: #1c1c1e;
+  padding: 12px;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Login --- */
+.login-container {
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.login-container h1 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #1c1c1e;
+}
+
+.auth-toggle {
+  display: flex;
+  justify-content: center;
+  background-color: #e5e5ea;
+  padding: 4px;
+  border-radius: 24px;
+  margin-bottom: 25px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.auth-toggle button {
+  background-color: transparent;
+  color: #8e8e93;
+  padding: 8px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.auth-toggle button.active {
+  background-color: #ffffff;
+  color: #007aff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 14px;
+  background-color: #f9f9fb;
+  border: 1px solid #e5e5ea !important;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.login-form input:focus {
+  border-color: #007aff !important;
+  background-color: #ffffff;
+}
+
+.login-form button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background-color: #007aff;
+  color: white;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+/* --- Dashboard --- */
+.dashboard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 30px;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5px;
+}
+
+.dash-header h2 {
+  font-size: 22px;
+  color: #1c1c1e;
+}
+
+.logout-btn-small {
+  background-color: #ffe5e5;
+  color: #ff3b30;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* --- Card --- */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  width: 100%;
+}
+
+.card h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8e8e93;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* --- Contatore Randori --- */
+.counter-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 10px 0 20px 0;
+}
+
+.round-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #f2f2f7;
+  font-size: 30px;
+  font-weight: bold;
+  color: #1c1c1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.round-btn:active {
+  background: #e5e5ea;
+}
+
+.counter-value {
+  font-size: 48px;
+  font-weight: bold;
+  color: #1c1c1e;
+  min-width: 50px;
+  text-align: center;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #34c759;
+  color: white;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(52, 199, 89, 0.2);
+}
+
+/* --- Filtri --- */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 15px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.filter-btn {
+  background: #f2f2f7;
+  padding: 9px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #8e8e93;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filter-btn.active {
+  background: #007aff;
+  color: white;
+  font-weight: 600;
+}
+
+.stats-total {
+  font-size: 42px;
+  font-weight: bold;
+  color: #007aff;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.stats-label {
+  text-align: center;
+  color: #8e8e93;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* --- Storico --- */
+.history-list, .coach-list {
+  list-style: none;
+  padding: 0;
+}
+
+.history-item, .coach-item, .admin-user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1.5px solid #f2f2f7;
+}
+
+.history-item:last-child, .coach-item:last-child, .admin-user-item:last-child {
+  border-bottom: none;
+}
+
+.empty-history {
+  text-align: center;
+  color: #8e8e93;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+/* --- Coach / Admin --- */
+.coach-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.coach-rank {
+  font-size: 16px;
+  font-weight: bold;
+  color: #8e8e93;
+  width: 25px;
+}
+
+.coach-name {
+  font-size: 16px;
+  color: #1c1c1e;
+  font-weight: 500;
+}
+
+.coach-total {
+  font-size: 22px;
+  font-weight: bold;
+  color: #007aff;
+}
+
+.admin-user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.role-badge {
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.role-badge.user { background-color: #f2f2f7; color: #8e8e93; }
+.role-badge.admin { background-color: #e5f0ff; color: #007aff; }
+.role-badge.super_admin { background-color: #ffe5e5; color: #ff3b30; }
+
+.role-actions {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.role-btn {
+  flex: 1;
+  background-color: #f2f2f7;
+  color: #8e8e93;
+  padding: 9px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.role-btn.active {
+  background-color: #34c759;
+  color: white;
+  font-weight: 600;
+}
+
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #8e8e93;
+  font-size: 16px;
+}
+
+
+/* --- Note e Pulsante Elimina --- */
+.note-input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 14px;
+  border: 1px solid #e5e5ea;
+  background-color: #f9f9fb;
+  font-size: 15px;
+  outline: none;
+  min-height: 90px; /* Rende il box di base molto più alto */
+  resize: vertical; /* Permette di allungarlo trascinando l'angolo basso */
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+.note-input:focus {
+  border-color: #007aff;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1); /* Dà un bell'effetto luminoso quando ci scrivi */
+}
+
+.history-item-ext {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1.5px solid #f2f2f7;
+}
+
+.history-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.history-note {
+  font-size: 13px;
+  color: #8e8e93;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.delete-btn {
+  background: #ffe5e5;
+  color: #ff3b30;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+/* --- Pannello Coach: Schede Espandibili (Accordion) --- */
+.athletes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.athlete-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.athlete-header {
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: #ffffff;
+}
+
+.athlete-header:active {
+  background: #f9f9fb;
+}
+
+.athlete-body {
+  padding: 0 20px 10px 20px;
+  border-top: 1px solid #f2f2f7;
+  background: #fafafc;
+}
+
+/* --- Hamburger Menu e Sidebar --- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #1c1c1e;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+  backdrop-filter: blur(2px);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 260px;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 100;
+  transition: left 0.3s ease;
+  padding: 40px 20px;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-btn {
+  background: #f2f2f7;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1c1c1e;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sidebar-btn.active {
+  background: #007aff;
+  color: white;
+}
+
+.sidebar-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ffe5e5;
+  color: #ff3b30;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* --- Input Pesi --- */
+.lifts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.lift-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.lift-input-group label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #8e8e93;
+  text-transform: uppercase;
+}
+
+.lift-input {
+  width: 100%;
+  padding: 12px;
+  background: #f9f9fb;
+  border: 1px solid #e5e5ea;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.lift-input:focus {
+  border-color: #007aff;
+  background: #fff;
+}
+
+.lift-history-row {
+  display: flex;
+  justify-content: space-between;
+  background: #f9f9fb;
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: 8px;
+  border: 1px solid #e5e5ea;
+}
+
+.lift-val {
+  font-size: 14px;
+  color: #1c1c1e;
+}
+
+.lift-val strong {
+  color: #007aff;
+}
+
+/* --- Grafici --- */
+.chart-empty {
+  text-align: center;
+  color: #8e8e93;
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+.chart-scroll {
+  overflow-x: auto;
+  margin: 5px 0 10px 0;
+}
+
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 0 4px;
+}
+
+.bar-chart-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 28px;
+  height: 100%;
+}
+
+.bar-chart-value {
+  font-size: 11px;
+  font-weight: 600;
+  color: #8e8e93;
+  margin-bottom: 4px;
+}
+
+.bar-chart-bar {
+  width: 16px;
+  border-radius: 6px 6px 2px 2px;
+}
+
+.bar-chart-label {
+  font-size: 10px;
+  color: #8e8e93;
+  margin-top: 6px;
+  white-space: nowrap;
+}
+
+.line-chart-svg {
+  width: 100%;
+  height: 160px;
+  margin: 5px 0;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 5px;
+}
+
+.chart-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #8e8e93;
+  font-weight: 500;
+}
+
+.chart-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* --- Modalità Modifica --- */
+.history-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+  margin-left: 10px;
+}
+
+.edit-btn {
+  background: #e5f0ff;
+  color: #007aff;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.edit-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.edit-count-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-count-row input {
+  width: 80px;
+  padding: 10px;
+  background: #f9f9fb;
+  border: 1px solid #e5e5ea;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.edit-count-row span {
+  font-size: 14px;
+  color: #8e8e93;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-actions .save-btn {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+.edit-actions .delete-btn {
+  margin-left: 0;
+}
